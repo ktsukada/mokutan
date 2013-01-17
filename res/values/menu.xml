@@ -1,0 +1,6 @@
+<resources>
+
+    <!-- Strings related to login -->
+    <string name="menu_login">ログイン</string>
+
+</resources>
