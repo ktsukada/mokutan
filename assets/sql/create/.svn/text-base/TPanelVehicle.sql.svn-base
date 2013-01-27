@@ -1,0 +1,9 @@
+CREATE TABLE [TPanelVehicle] (
+ [VerNo]  int not null,
+ [VehicleDiv]  int not null,
+ [PanelSign]  text not null,
+ [Symbol]  text,
+ [MaxDamageSignSet]  int,
+ [PanelName]  text,
+ [DisplayOrder]  int
+);

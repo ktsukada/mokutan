@@ -1,0 +1,9 @@
+CREATE TABLE [SpecialNote] (
+ [EventCode]  int not null,
+ [EventCount]  int not null,
+ [VenueCode]  int not null,
+ [WarehouseNumber]  int not null,
+ [LineCount]  int not null,
+ [SpecialNote]  text,
+ [UpdateFlg]  int
+);

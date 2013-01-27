@@ -1,0 +1,5 @@
+CREATE TABLE [MSpecialNoteMajorDiv] (
+ [MajorDivCode]  int,
+ [MajorDivName]  text,
+ [DisplayOrder]  int
+);

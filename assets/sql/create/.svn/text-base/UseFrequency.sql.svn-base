@@ -1,0 +1,6 @@
+CREATE TABLE [UseFrequency] (
+ [FrequencyCode]  int not null,
+ [MajorDivCode]  int not null,
+ [DetailCode]  int not null,
+ [UseCount]  int
+);

@@ -1,0 +1,9 @@
+<resources>
+
+    <!-- Strings related to login -->
+    <string name="action_sign_in_register"><b>Sign in</b> or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_show_map">Map</string>
+    <string name="action_show_ensen_list">Ensen</string>
+    
+</resources>

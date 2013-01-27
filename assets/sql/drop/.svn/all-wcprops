@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/SlcAssesment/!svn/ver/84/trunk/SlcAssessment/assets/sql/drop
+END
+DropExhibitVehicle.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/drop/DropExhibitVehicle.sql
+END
+DropPanelDamage.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/drop/DropPanelDamage.sql
+END
+DropMSpacialNoteDetail.sql
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/drop/DropMSpacialNoteDetail.sql
+END
+DropMDamageSignOfPanels.sql
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/SlcAssesment/!svn/ver/84/trunk/SlcAssessment/assets/sql/drop/DropMDamageSignOfPanels.sql
+END
+DropSpecialNote.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/SlcAssesment/!svn/ver/28/trunk/SlcAssessment/assets/sql/drop/DropSpecialNote.sql
+END
+MEvaluatePoint.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/SlcAssesment/!svn/ver/61/trunk/SlcAssessment/assets/sql/drop/MEvaluatePoint.sql
+END
+DropMVehicleFuel.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/drop/DropMVehicleFuel.sql
+END
+DropAppealpoint.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/SlcAssesment/!svn/ver/38/trunk/SlcAssessment/assets/sql/drop/DropAppealpoint.sql
+END
+DropMMaker.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/drop/DropMMaker.sql
+END
+DropMAppealpointDetail.sql
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/SlcAssesment/!svn/ver/47/trunk/SlcAssessment/assets/sql/drop/DropMAppealpointDetail.sql
+END
+DropUseFrequency.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/drop/DropUseFrequency.sql
+END
+DropMSpecialNoteMajorDiv.sql
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/drop/DropMSpecialNoteMajorDiv.sql
+END
+DropEvaluatePoint.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/SlcAssesment/!svn/ver/38/trunk/SlcAssessment/assets/sql/drop/DropEvaluatePoint.sql
+END
+DropTDamageSignCategory.sql
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/SlcAssesment/!svn/ver/38/trunk/SlcAssessment/assets/sql/drop/DropTDamageSignCategory.sql
+END
+DropEvent.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/drop/DropEvent.sql
+END
+DropMRepairDetail.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/drop/DropMRepairDetail.sql
+END
+DropTPanelVehicle.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/drop/DropTPanelVehicle.sql
+END
+DropTDamageSign.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/drop/DropTDamageSign.sql
+END
+DropAssessment.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/drop/DropAssessment.sql
+END
+DropMAppealpointMajorDiv.sql
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/SlcAssesment/!svn/ver/47/trunk/SlcAssessment/assets/sql/drop/DropMAppealpointMajorDiv.sql
+END
+DropMDriveSystem.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/drop/DropMDriveSystem.sql
+END
+DropMRepairMajorDiv.sql
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/drop/DropMRepairMajorDiv.sql
+END
+DropMColor.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/SlcAssesment/!svn/ver/28/trunk/SlcAssessment/assets/sql/drop/DropMColor.sql
+END
+DropMUser.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/SlcAssesment/!svn/ver/38/trunk/SlcAssessment/assets/sql/drop/DropMUser.sql
+END
+EvaluatePoint.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/SlcAssesment/!svn/ver/61/trunk/SlcAssessment/assets/sql/drop/EvaluatePoint.sql
+END

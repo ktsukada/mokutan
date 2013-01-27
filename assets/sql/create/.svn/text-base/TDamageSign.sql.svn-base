@@ -1,0 +1,7 @@
+CREATE TABLE [TDamageSign] (
+ [VerNo]  int not null,
+ [DamageSign]  text not null,
+ [DamageSignName]  text,
+ [DamagePoint]  int,
+ [DisplayOrder]  int
+);

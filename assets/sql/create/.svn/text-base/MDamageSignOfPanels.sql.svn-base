@@ -1,0 +1,6 @@
+CREATE TABLE [MDamageSignOfPanels] (
+ [VerNo]  int,
+ [VehicleDiv]  int not null,
+ [PanelSign]  text,
+ [DamageSign]  text
+);

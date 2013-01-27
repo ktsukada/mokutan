@@ -1,0 +1,5 @@
+CREATE TABLE [MAppealpointMajorDiv] (
+ [MajorDivCode]  int,
+ [MajorDivName]  text,
+ [DisplayOrder]  int
+);

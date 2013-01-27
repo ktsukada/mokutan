@@ -1,0 +1,15 @@
+CREATE TABLE [PanelDamage] (
+ [EventCode]  int not null,
+ [EventCount]  int not null,
+ [VenueCode]  int not null,
+ [WarehouseNumber]  int not null,
+ [PanelSign]  text not null,
+ [DamageSign01]  text,
+ [DamageSign02]  text,
+ [DamageSign03]  text,
+ [DamageSign04]  text,
+ [DamageSign05]  text,
+ [DamageSign06]  text,
+ [DamageSign07]  text,
+ [UpdateFlg]  int
+);

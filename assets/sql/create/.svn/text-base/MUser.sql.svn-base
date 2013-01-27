@@ -1,0 +1,9 @@
+CREATE TABLE [MUser] (
+ [UserCode]  int not null,
+ [OfficeDiv]  int not null,
+ [DisplayOrder]  int,
+ [OfficeName]  text,
+ [BranchName]  text,
+ [AbbrBranchName]  text,
+ [OfficeSign]  text
+);

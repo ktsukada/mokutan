@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/SlcAssesment/!svn/ver/108/trunk/SlcAssessment/assets/sql/create
+END
+Event.sql
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/create/Event.sql
+END
+TDamageSignCategory.sql
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/SlcAssesment/!svn/ver/38/trunk/SlcAssessment/assets/sql/create/TDamageSignCategory.sql
+END
+MRepairDetail.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/create/MRepairDetail.sql
+END
+TPanelVehicle.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/SlcAssesment/!svn/ver/32/trunk/SlcAssessment/assets/sql/create/TPanelVehicle.sql
+END
+TDamageSign.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/create/TDamageSign.sql
+END
+MAppealpointMajorDiv.sql
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/SlcAssesment/!svn/ver/47/trunk/SlcAssessment/assets/sql/create/MAppealpointMajorDiv.sql
+END
+Assessment.sql
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/SlcAssesment/!svn/ver/50/trunk/SlcAssessment/assets/sql/create/Assessment.sql
+END
+MRepairMajorDiv.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/create/MRepairMajorDiv.sql
+END
+MDriveSystem.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/create/MDriveSystem.sql
+END
+MColor.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/SlcAssesment/!svn/ver/28/trunk/SlcAssessment/assets/sql/create/MColor.sql
+END
+MUser.sql
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/SlcAssesment/!svn/ver/38/trunk/SlcAssessment/assets/sql/create/MUser.sql
+END
+ExhibitVehicle.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/SlcAssesment/!svn/ver/31/trunk/SlcAssessment/assets/sql/create/ExhibitVehicle.sql
+END
+MEvaluatePoint.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/SlcAssesment/!svn/ver/61/trunk/SlcAssessment/assets/sql/create/MEvaluatePoint.sql
+END
+PanelDamage.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/create/PanelDamage.sql
+END
+TDamageSignCategoryCreateData.sql
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/SlcAssesment/!svn/ver/108/trunk/SlcAssessment/assets/sql/create/TDamageSignCategoryCreateData.sql
+END
+MSpacialNoteDetail.sql
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/create/MSpacialNoteDetail.sql
+END
+MDamageSignOfPanels.sql
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/SlcAssesment/!svn/ver/84/trunk/SlcAssessment/assets/sql/create/MDamageSignOfPanels.sql
+END
+SpecialNote.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/SlcAssesment/!svn/ver/28/trunk/SlcAssessment/assets/sql/create/SpecialNote.sql
+END
+MVehicleFuel.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/create/MVehicleFuel.sql
+END
+MMaker.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/create/MMaker.sql
+END
+Appealpoint.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/SlcAssesment/!svn/ver/38/trunk/SlcAssessment/assets/sql/create/Appealpoint.sql
+END
+MAppealpointDetail.sql
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/SlcAssesment/!svn/ver/47/trunk/SlcAssessment/assets/sql/create/MAppealpointDetail.sql
+END
+UseFrequency.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/SlcAssesment/!svn/ver/99/trunk/SlcAssessment/assets/sql/create/UseFrequency.sql
+END
+MSpecialNoteMajorDiv.sql
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/SlcAssesment/!svn/ver/25/trunk/SlcAssessment/assets/sql/create/MSpecialNoteMajorDiv.sql
+END
+EvaluatePoint.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/SlcAssesment/!svn/ver/61/trunk/SlcAssessment/assets/sql/create/EvaluatePoint.sql
+END

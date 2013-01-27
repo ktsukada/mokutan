@@ -1,0 +1,9 @@
+CREATE TABLE [Appealpoint] (
+ [EventCode]  int not null,
+ [EventCount]  int not null,
+ [VenueCode]  int not null,
+ [WarehouseNumber]  int not null,
+ [LineCount]  int,
+ [Appealpoint]  text,
+ [UpdateFlg]  int
+);
