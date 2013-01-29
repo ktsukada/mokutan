@@ -33,21 +33,6 @@ public final class TopActivity_
 
     private void afterSetContentView_() {
         {
-            View view = findViewById(id.show_ensen_list_button);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        TopActivity_.this.onClickShowEnsenListButton();
-                    }
-
-                }
-                );
-            }
-        }
-        {
             View view = findViewById(id.show_map_button);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -71,6 +56,21 @@ public final class TopActivity_
                     @Override
                     public void onClick(View view) {
                         TopActivity_.this.onClickSignInButton();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.show_ensen_list_button);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        TopActivity_.this.onClickShowEnsenListButton();
                     }
 
                 }
