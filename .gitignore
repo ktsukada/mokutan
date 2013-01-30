@@ -1,3 +1,7 @@
+.factorypath
+.apt_generated/		
+.settings/
+
 # built application files
 *.apk
 *.ap_

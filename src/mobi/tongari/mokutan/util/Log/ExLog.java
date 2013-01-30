@@ -22,7 +22,7 @@ public class ExLog {
 	private ExLog() {
 	}
 
-	// é †ä½
+	// ‡ˆÊ
 	// ERROR
 	// WARN
 	// INFO
@@ -99,13 +99,13 @@ public class ExLog {
 	}
 
 	/**
-	 * ç¾åœ¨ã®logcatã®å†…å®¹ã‚’ãƒ­ã‚°ãƒ•ã‚¡ã‚¤ãƒ«ã«å‡ºåŠ›ã™ã‚‹ã€‚
+	 * Œ»İ‚Ìlogcat‚Ì“à—e‚ğƒƒOƒtƒ@ƒCƒ‹‚Éo—Í‚·‚éB
 	 */
 	public static void saveLogAndPopupDialog(final Context context) {
 		saveLog();
 
 		AlertDialog.Builder ad = new AlertDialog.Builder(context);
-		ad.setMessage("ã‚·ã‚¹ãƒ†ãƒ ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸã€‚\nç®¡ç†è€…ã«å•ã„åˆã‚ã›ã¦ãã ã•ã„ã€‚");
+		ad.setMessage("ƒVƒXƒeƒ€ƒGƒ‰[‚ª”­¶‚µ‚Ü‚µ‚½B\nŠÇ—Ò‚É–â‚¢‡‚í‚¹‚Ä‚­‚¾‚³‚¢B");
 		ad.setPositiveButton(context.getString(android.R.string.ok),
 				new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int whichButton) {
@@ -158,14 +158,14 @@ public class ExLog {
 				try {
 					reader.close();
 				} catch (IOException e) {
-					e(e, "logä½œæˆæ™‚ã«ã‚¨ãƒ©ãƒ¼ç™ºç”Ÿ:%s", e.getMessage());
+					e(e, "logì¬‚ÉƒGƒ‰[”­¶:%s", e.getMessage());
 				}
 			}
 			if (bw != null) {
 				try {
 					bw.close();
 				} catch (IOException e) {
-					e(e, "logä½œæˆæ™‚ã«ã‚¨ãƒ©ãƒ¼ç™ºç”Ÿ:%s", e.getMessage());
+					e(e, "logì¬‚ÉƒGƒ‰[”­¶:%s", e.getMessage());
 				}
 			}
 

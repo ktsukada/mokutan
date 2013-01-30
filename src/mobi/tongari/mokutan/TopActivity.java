@@ -19,8 +19,8 @@ import com.googlecode.androidannotations.annotations.sharedpreferences.Pref;
 @EActivity(R.layout.activity_top)
 public class TopActivity extends Activity {
 
-	@Pref
-	SharedPrefs_ mPrefs;
+//	@Pref
+//	SharedPrefs_ mPrefs;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

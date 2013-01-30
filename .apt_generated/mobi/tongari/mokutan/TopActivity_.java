@@ -28,25 +28,9 @@ public final class TopActivity_
     }
 
     private void init_(Bundle savedInstanceState) {
-        mPrefs = new SharedPrefs_(this);
     }
 
     private void afterSetContentView_() {
-        {
-            View view = findViewById(id.show_map_button);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        TopActivity_.this.onClickShowMapButton();
-                    }
-
-                }
-                );
-            }
-        }
         {
             View view = findViewById(id.sign_in_button);
             if (view!= null) {
@@ -71,6 +55,21 @@ public final class TopActivity_
                     @Override
                     public void onClick(View view) {
                         TopActivity_.this.onClickShowEnsenListButton();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.show_map_button);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        TopActivity_.this.onClickShowMapButton();
                     }
 
                 }

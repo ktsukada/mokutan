@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.view.Menu;
 
 import com.googlecode.androidannotations.annotations.EActivity;
-import com.googlecode.androidannotations.annotations.ItemClick;
 
 @EActivity(R.layout.activity_ensen_list)
 public class EnsenListActivity extends Activity {
@@ -16,8 +15,8 @@ public class EnsenListActivity extends Activity {
 		return true;
 	}
 
-//	@ItemClick(R.id)
-	public void onListItemClick(){
-		
+	// @ItemClick(R.id)
+	public void onListItemClick() {
+
 	}
 }
