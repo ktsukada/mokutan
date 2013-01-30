@@ -1,5 +1,9 @@
 package mobi.tongari.mokutan.service;
 
+import java.util.List;
+
+import mobi.tongari.mokutan.info.CarName;
+
 import org.springframework.http.converter.json.MappingJacksonHttpMessageConverter;
 
 import com.googlecode.androidannotations.annotations.rest.Get;
@@ -9,9 +13,9 @@ import com.googlecode.androidannotations.annotations.rest.Rest;
 public interface SekitanRestClient {
 
 	@Get("car_names.json")
-	Void getCarNames();
+	List<CarName> getCarNames();
 
 	@Get("car_names/{id}.json")
-	Void getCarName(String id);
+	CarName getCarName(String id);
 
 }
