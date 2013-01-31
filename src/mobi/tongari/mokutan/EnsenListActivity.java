@@ -4,6 +4,7 @@ import java.util.List;
 
 import mobi.tongari.mokutan.info.CarName;
 import mobi.tongari.mokutan.service.SekitanRestClient;
+import android.R;
 import android.app.Activity;
 import android.view.Menu;
 
@@ -15,7 +16,7 @@ public class EnsenListActivity extends Activity {
 
 	@RestService
 	SekitanRestClient sekitanRestClient;
-	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -26,6 +27,6 @@ public class EnsenListActivity extends Activity {
 	// @ItemClick(R.id)
 	public void onListItemClick() {
 		List<CarName> aa = sekitanRestClient.getCarNames();
-				
+
 	}
 }
