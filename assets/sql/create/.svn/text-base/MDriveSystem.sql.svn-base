@@ -1,5 +1,0 @@
-CREATE TABLE [MDriveSystem] (
- [DriveSystemCode]  int not null,
- [DriveSystemName]  text,
- [DisplayOrder]  int
-);

@@ -1,5 +1,0 @@
-CREATE TABLE [TDamageSignCategory] (
- [VerNo]  int not null,
- [DamageSignCategory]  text not null,
- [DisplayOrder]  int
-);

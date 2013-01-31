@@ -1,4 +1,0 @@
-CREATE TABLE [MColor] (
- [ColorCode]  int not null,
- [ColorName]  text
-);

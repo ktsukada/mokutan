@@ -1,5 +1,0 @@
-INSERT INTO TDamageSignCategory values(2, '“Ê‰š¥‹T—ô', 1);
-INSERT INTO TDamageSignCategory values(2, 'ü·½Ş', 2);
-INSERT INTO TDamageSignCategory values(2, '•…H', 3);
-INSERT INTO TDamageSignCategory values(2, '»ËŞ', 4);
-INSERT INTO TDamageSignCategory values(2, '‚»‚Ì‘¼', 999);

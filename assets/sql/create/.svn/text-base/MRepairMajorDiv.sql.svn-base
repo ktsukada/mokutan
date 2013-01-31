@@ -1,5 +1,0 @@
-CREATE TABLE [MRepairMajorDiv] (
- [MajorDivCode]  int not null,
- [MajorDivName]  text,
- [DisplayOrder]  int
-);

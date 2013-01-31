@@ -1,6 +1,0 @@
-CREATE TABLE [MVehicleFuel] (
- [FuelCode]  int not null,
- [FuelName]  text,
- [FuelSign]  text,
- [DisplayOrder]  int
-);

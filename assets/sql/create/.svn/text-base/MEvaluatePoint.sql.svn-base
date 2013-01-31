@@ -1,6 +1,0 @@
-CREATE TABLE [MEvaluatePoint] (
- [TypeDiv]  int not null,
- [EvaluateCode]  int not null,
- [EvaluateName]  text,
- [DisplayOrder]  int
-);

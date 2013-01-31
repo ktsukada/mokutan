@@ -1,6 +1,0 @@
-CREATE TABLE [MSpacialNoteDetail] (
- [MajorDivCode]  int not null,
- [DetailCode]  int not null,
- [DetailName]  text,
- [DisplayOrder]  int
-);
