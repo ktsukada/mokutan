@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import mobi.tongari.mokutan.R.layout;
+import mobi.tongari.mokutan.service.SekitanRestClient_;
 
 public final class EnsenListActivity_
     extends EnsenListActivity
@@ -26,6 +27,7 @@ public final class EnsenListActivity_
     }
 
     private void init_(Bundle savedInstanceState) {
+        sekitanRestClient = new SekitanRestClient_();
     }
 
     private void afterSetContentView_() {

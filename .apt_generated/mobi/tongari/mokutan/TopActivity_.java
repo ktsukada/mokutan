@@ -9,16 +9,21 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
+import com.googlecode.androidannotations.api.BackgroundExecutor;
 import mobi.tongari.mokutan.R.id;
 import mobi.tongari.mokutan.R.layout;
+import mobi.tongari.mokutan.service.SekitanRestClient_;
 
 public final class TopActivity_
     extends TopActivity
 {
 
+    private Handler handler_ = new Handler();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -28,9 +33,25 @@ public final class TopActivity_
     }
 
     private void init_(Bundle savedInstanceState) {
+        sekitanRestClient = new SekitanRestClient_();
     }
 
     private void afterSetContentView_() {
+        {
+            View view = findViewById(id.show_ensen_list_button);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        TopActivity_.this.onClickShowEnsenListButton();
+                    }
+
+                }
+                );
+            }
+        }
         {
             View view = findViewById(id.sign_in_button);
             if (view!= null) {
@@ -47,14 +68,14 @@ public final class TopActivity_
             }
         }
         {
-            View view = findViewById(id.show_ensen_list_button);
+            View view = findViewById(id.test1_button);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        TopActivity_.this.onClickShowEnsenListButton();
+                        TopActivity_.this.onClickTest1Button();
                     }
 
                 }
@@ -98,6 +119,42 @@ public final class TopActivity_
 
     public static TopActivity_.IntentBuilder_ intent(Context context) {
         return new TopActivity_.IntentBuilder_(context);
+    }
+
+    @Override
+    public void updateCarName() {
+        handler_.post(new Runnable() {
+
+
+            @Override
+            public void run() {
+                try {
+                    TopActivity_.super.updateCarName();
+                } catch (RuntimeException e) {
+                    Log.e("TopActivity_", "A runtime exception was thrown while executing code in a runnable", e);
+                }
+            }
+
+        }
+        );
+    }
+
+    @Override
+    public void searchCarNamesAsync() {
+        BackgroundExecutor.execute(new Runnable() {
+
+
+            @Override
+            public void run() {
+                try {
+                    TopActivity_.super.searchCarNamesAsync();
+                } catch (RuntimeException e) {
+                    Log.e("TopActivity_", "A runtime exception was thrown while executing code in a runnable", e);
+                }
+            }
+
+        }
+        );
     }
 
     public static class IntentBuilder_ {

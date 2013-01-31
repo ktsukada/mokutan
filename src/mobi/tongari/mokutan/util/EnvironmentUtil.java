@@ -19,7 +19,7 @@ public class EnvironmentUtil {
         return mDirectories;
     }
 
-    // ストレージのディクトリを返す。SDカード優先。
+    // 繧ｹ繝医Ξ繝ｼ繧ｸ縺ｮ繝�繧｣繧ｯ繝医Μ繧定ｿ斐☆縲４D繧ｫ繝ｼ繝牙━蜈医�
     public static String getStoragePath() {
         String path = "";
 
