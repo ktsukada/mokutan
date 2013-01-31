@@ -4,7 +4,6 @@ import java.util.List;
 
 import mobi.tongari.mokutan.info.CarName;
 import mobi.tongari.mokutan.service.SekitanRestClient;
-import android.R;
 import android.app.Activity;
 import android.view.Menu;
 
