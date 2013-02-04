@@ -9,7 +9,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -23,7 +22,6 @@ public final class TopActivity_
     extends TopActivity
 {
 
-    private Handler handler_ = new Handler();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -37,6 +35,36 @@ public final class TopActivity_
     }
 
     private void afterSetContentView_() {
+        {
+            View view = findViewById(id.show_map_button);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        TopActivity_.this.onClickShowMapButton();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.test1_button);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        TopActivity_.this.onClickTest1Button();
+                    }
+
+                }
+                );
+            }
+        }
         {
             View view = findViewById(id.show_ensen_list_button);
             if (view!= null) {
@@ -67,36 +95,6 @@ public final class TopActivity_
                 );
             }
         }
-        {
-            View view = findViewById(id.test1_button);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        TopActivity_.this.onClickTest1Button();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.show_map_button);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        TopActivity_.this.onClickShowMapButton();
-                    }
-
-                }
-                );
-            }
-        }
     }
 
     @Override
@@ -119,24 +117,6 @@ public final class TopActivity_
 
     public static TopActivity_.IntentBuilder_ intent(Context context) {
         return new TopActivity_.IntentBuilder_(context);
-    }
-
-    @Override
-    public void updateCarName() {
-        handler_.post(new Runnable() {
-
-
-            @Override
-            public void run() {
-                try {
-                    TopActivity_.super.updateCarName();
-                } catch (RuntimeException e) {
-                    Log.e("TopActivity_", "A runtime exception was thrown while executing code in a runnable", e);
-                }
-            }
-
-        }
-        );
     }
 
     @Override

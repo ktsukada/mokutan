@@ -12,11 +12,13 @@ import com.googlecode.androidannotations.annotations.rest.Rest;
 @Rest(rootUrl = "http://sekitan.herokuapp.com", converters = { GsonHttpMessageConverter.class })
 public interface SekitanRestClient {
 
-	@Get("/car_names")
+	@Get("/car_names.json")
 	CarNameList getCarNames();
 
-	@Get("/car_names/{id}")
+	@Get("/car_names/{id}.json")
 	CarName getCarName(String id);
 
-	RestTemplate getRestTemplate(); 
+	RestTemplate getRestTemplate();
+	
+	void setRestTemplate(RestTemplate restTemplate);
 }

@@ -1,8 +1,5 @@
 package mobi.tongari.mokutan;
 
-import java.util.List;
-
-import mobi.tongari.mokutan.info.CarName;
 import mobi.tongari.mokutan.info.CarNameList;
 import mobi.tongari.mokutan.service.SekitanRestClient;
 import mobi.tongari.mokutan.util.Log.ExLog;

@@ -3,7 +3,12 @@
  */
 package mobi.tongari.mokutan;
 
+import java.util.Collections;
 import java.util.List;
+
+import org.springframework.http.MediaType;
+import org.springframework.http.converter.json.GsonHttpMessageConverter;
+import org.springframework.web.client.RestTemplate;
 
 import mobi.tongari.mokutan.info.CarName;
 import mobi.tongari.mokutan.info.CarNameList;
@@ -74,28 +79,43 @@ public class TopActivity extends Activity {
 		// MapActivity.class);
 		// startActivity(intent);
 
-//		CarNameList aa = sekitanRestClient.getCarNames();
-//		ExLog.d("mokutan", aa.toString());
+		// CarNameList aa = sekitanRestClient.getCarNames();
+		// ExLog.d("mokutan", aa.toString());
 		searchCarNamesAsync();
 	}
 
 	@Click(R.id.show_ensen_list_button)
 	void onClickShowEnsenListButton() {
 		// EnsenListActivity_.intent(getApplicationContext()).start();
-		Intent intent = new Intent(getApplicationContext(),
-				EnsenListActivity_.class);
-		startActivity(intent);
+		// Intent intent = new Intent(getApplicationContext(),
+		// EnsenListActivity_.class);
+		// startActivity(intent);
 	}
 
 	@Background
 	void searchCarNamesAsync() {
-		CarNameList aa = sekitanRestClient.getCarNames();
-		Log.d("a",aa.toString());
-		updateCarName();
-	}
+		RestTemplate restTemplate = new RestTemplate(true);
+		sekitanRestClient.setRestTemplate(restTemplate);
+		GsonHttpMessageConverter messageConverter = new GsonHttpMessageConverter();
+		messageConverter.setSupportedMediaTypes(Collections
+				.singletonList(new MediaType("text", "javascript")));
+		sekitanRestClient.getRestTemplate().getMessageConverters()
+				.add(messageConverter);
+		try {
+			// rest call
+			CarNameList response = sekitanRestClient.getCarNames();
+		} catch (Exception ex) {
+			String a = "aaa";
+		} finally {
+		}
 
-	@UiThread
-	void updateCarName() {
-
+//		updateCarName();
 	}
+//
+//	@UiThread
+//	public void updateCarName() {
+//		// TODO Auto-generated method stub
+//
+//	}
+
 }
