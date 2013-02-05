@@ -67,9 +67,7 @@ public class TopActivity extends Activity {
 
 	@Click(R.id.test1_button)
 	void onClickTest1Button() {
-		ExLog.d("mokutan", "start");
-		CarNameList aa = sekitanRestClient.getCarNames();
-		ExLog.d("mokutan", aa.toString());
+		searchCarNamesAsync2();
 	}
 
 	@Click(R.id.show_map_button)
@@ -94,28 +92,44 @@ public class TopActivity extends Activity {
 
 	@Background
 	void searchCarNamesAsync() {
-		RestTemplate restTemplate = new RestTemplate(true);
-		sekitanRestClient.setRestTemplate(restTemplate);
-		GsonHttpMessageConverter messageConverter = new GsonHttpMessageConverter();
-		messageConverter.setSupportedMediaTypes(Collections
-				.singletonList(new MediaType("text", "javascript")));
-		sekitanRestClient.getRestTemplate().getMessageConverters()
-				.add(messageConverter);
 		try {
 			// rest call
+			RestTemplate restTemplate = new RestTemplate(true);
+			sekitanRestClient.setRestTemplate(restTemplate);
+			GsonHttpMessageConverter messageConverter = new GsonHttpMessageConverter();
+			messageConverter.setSupportedMediaTypes(Collections
+					.singletonList(new MediaType("text", "javascript")));
+			sekitanRestClient.getRestTemplate().getMessageConverters()
+					.add(messageConverter);
+
 			CarNameList response = sekitanRestClient.getCarNames();
+
+			updateCarName(response);
+
 		} catch (Exception ex) {
 			String a = "aaa";
 		} finally {
 		}
-
-//		updateCarName();
 	}
-//
-//	@UiThread
-//	public void updateCarName() {
-//		// TODO Auto-generated method stub
-//
-//	}
+
+	@Background
+	void searchCarNamesAsync2() {
+		try {
+
+			CarNameList response = sekitanRestClient.getCarNames();
+
+			updateCarName(response);
+
+		} catch (Exception ex) {
+			String a = "aaa";
+		} finally {
+		}
+	}
+	
+	@UiThread
+	public void updateCarName(CarNameList list) {
+		// TODO Auto-generated method stub
+		Log.d(" ", list.toString());
+	}
 
 }
