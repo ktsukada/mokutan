@@ -1,5 +1,7 @@
 package mobi.tongari.mokutan;
 
+import java.util.List;
+
 import mobi.tongari.mokutan.info.CarNameList;
 import mobi.tongari.mokutan.service.SekitanRestClient;
 import mobi.tongari.mokutan.util.Log.ExLog;
@@ -25,8 +27,8 @@ public class EnsenListActivity extends Activity {
 	
 	// @ItemClick(R.id)
 	public void onListItemClick() {
-		CarNameList aa = sekitanRestClient.getCarNames();
-		ExLog.d("mokutan", aa.toString());
+//		List<CarName> aa = sekitanRestClient.getCarNames();
+//		ExLog.d("mokutan", aa.toString());
 	}
 	
 	

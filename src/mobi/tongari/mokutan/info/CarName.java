@@ -2,33 +2,61 @@ package mobi.tongari.mokutan.info;
 
 import java.util.Date;
 
+import org.codehaus.jackson.annotate.JsonProperty;
+
 public class CarName {
-	public String getMaker_id() {
-		return maker_id;
+	
+	String id;
+	
+	public String getId() {
+		return id;
 	}
-	public void setMaker_id(String maker_id) {
-		this.maker_id = maker_id;
+
+	public void setId(String id) {
+		this.id = id;
 	}
+
+	@JsonProperty("maker_id")
+	String makerId;
+	
+	public String getMakerId() {
+		return makerId;
+	}
+
+	public void setMakerId(String makerId) {
+		this.makerId = makerId;
+	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Date getCreated_at() {
-		return created_at;
+
+	public Date getCreatedAt() {
+		return createdAt;
 	}
-	public void setCreated_at(Date created_at) {
-		this.created_at = created_at;
+
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
 	}
-	public Date getUpdated_at() {
-		return updated_at;
+
+	public Date getUpdatedAt() {
+		return updatedAt;
 	}
-	public void setUpdated_at(Date updated_at) {
-		this.updated_at = updated_at;
+
+	public void setUpdatedAt(Date updatedAt) {
+		this.updatedAt = updatedAt;
 	}
-	String maker_id;
+
+	@JsonProperty("name")
 	String name;
-	Date created_at;
-	Date updated_at;
+	
+	@JsonProperty("created_at")
+	Date createdAt;
+	
+	@JsonProperty("updated_at")
+	Date updatedAt;
 }

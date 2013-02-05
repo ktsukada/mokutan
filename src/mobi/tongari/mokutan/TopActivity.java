@@ -6,27 +6,23 @@ package mobi.tongari.mokutan;
 import java.util.Collections;
 import java.util.List;
 
+import mobi.tongari.mokutan.info.CarName;
+import mobi.tongari.mokutan.info.CarNameList;
+import mobi.tongari.mokutan.service.SekitanRestClient;
+
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.json.GsonHttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
-import mobi.tongari.mokutan.info.CarName;
-import mobi.tongari.mokutan.info.CarNameList;
-import mobi.tongari.mokutan.service.SekitanRestClient;
-import mobi.tongari.mokutan.util.Log.ExLog;
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 
-import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.Background;
 import com.googlecode.androidannotations.annotations.Click;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.UiThread;
 import com.googlecode.androidannotations.annotations.rest.RestService;
-import com.googlecode.androidannotations.annotations.sharedpreferences.Pref;
 
 /**
  * @author k-tsukada
@@ -93,17 +89,7 @@ public class TopActivity extends Activity {
 	@Background
 	void searchCarNamesAsync() {
 		try {
-			// rest call
-			RestTemplate restTemplate = new RestTemplate(true);
-			sekitanRestClient.setRestTemplate(restTemplate);
-			GsonHttpMessageConverter messageConverter = new GsonHttpMessageConverter();
-			messageConverter.setSupportedMediaTypes(Collections
-					.singletonList(new MediaType("text", "javascript")));
-			sekitanRestClient.getRestTemplate().getMessageConverters()
-					.add(messageConverter);
-
 			CarNameList response = sekitanRestClient.getCarNames();
-
 			updateCarName(response);
 
 		} catch (Exception ex) {
@@ -116,18 +102,25 @@ public class TopActivity extends Activity {
 	void searchCarNamesAsync2() {
 		try {
 
-			CarNameList response = sekitanRestClient.getCarNames();
+			CarName response = sekitanRestClient.getCarName("4");
 
-			updateCarName(response);
+//			updateCarName(response);
+			updateCarName2(response);
 
 		} catch (Exception ex) {
 			String a = "aaa";
 		} finally {
 		}
 	}
-	
+
 	@UiThread
 	public void updateCarName(CarNameList list) {
+		// TODO Auto-generated method stub
+		Log.d(" ", list.toString());
+	}
+
+	@UiThread
+	public void updateCarName2(CarName list) {
 		// TODO Auto-generated method stub
 		Log.d(" ", list.toString());
 	}

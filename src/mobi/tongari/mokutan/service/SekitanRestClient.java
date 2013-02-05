@@ -3,7 +3,6 @@ package mobi.tongari.mokutan.service;
 import mobi.tongari.mokutan.info.CarName;
 import mobi.tongari.mokutan.info.CarNameList;
 
-//import org.springframework.http.converter.json.GsonHttpMessageConverter;
 import org.springframework.http.converter.json.MappingJacksonHttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
@@ -16,7 +15,7 @@ import com.googlecode.androidannotations.api.rest.MediaType;
 @Rest(rootUrl = "http://sekitan.herokuapp.com", converters = { MappingJacksonHttpMessageConverter.class })
 public interface SekitanRestClient {
 
-	@Get("/car_names")
+	@Get("/car_names.json")
 	@Accept(MediaType.APPLICATION_JSON)
 	CarNameList getCarNames();
 
@@ -24,6 +23,6 @@ public interface SekitanRestClient {
 	CarName getCarName(String id);
 
 	RestTemplate getRestTemplate();
-	
+
 	void setRestTemplate(RestTemplate restTemplate);
 }
