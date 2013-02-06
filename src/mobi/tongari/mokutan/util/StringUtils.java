@@ -2,14 +2,13 @@ package mobi.tongari.mokutan.util;
 
 import java.io.UnsupportedEncodingException;
 
-import mobi.tongari.mokutan.util.Log.ExLog;
 
 public class StringUtils {
 
     /**
-     * ˆø”‚Ì•¶Žš—ñ‚ÌƒoƒCƒg”‚ð•Ô‚µ‚Ü‚·BShift_JIS‚Æ‚µ‚Ä•]‰¿‚µ‚Ü‚·B
-     * @param target •]‰¿‘ÎÛ
-     * @return Shift-JISŒ`Ž®‚Å•]‰¿‚µ‚½ê‡‚ÌƒoƒCƒg”
+     * å¼•æ•°ã®æ–‡å­—åˆ—ã®ãƒã‚¤ãƒˆæ•°ã‚’è¿”ã™ã€‚Shift_jisã¨ã—ã¦è©•ä¾¡ã—ã¾ã™ã€‚
+     * @param target è©•ä¾¡å¯¾è±¡
+     * @return Shift-JISå½¢å¼ã§è©•ä¾¡ã—ãŸå ´åˆã®ãƒã‚¤ãƒˆæ•°
      */
     public static int getShiftJISByteLength(String target) {
         try {
@@ -17,7 +16,7 @@ public class StringUtils {
                 return target.getBytes("Shift_JIS").length;
 
         } catch (UnsupportedEncodingException e) {
-        	ExLog.e(e,"•¶ŽšƒoƒCƒg””»’èƒGƒ‰[F%s",e.getMessage());
+        	ExLog.e(e,"æ–‡å­—ãƒã‚¤ãƒˆæ•°åˆ¤å®šã‚¨ãƒ©ãƒ¼:%s",e.getMessage());
         }
         return 0;
     }

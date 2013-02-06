@@ -1,13 +1,13 @@
-package mobi.tongari.mokutan.info;
+package mobi.tongari.mokutan.dao.servece;
 
 import java.util.Date;
 
 import org.codehaus.jackson.annotate.JsonProperty;
 
 public class CarName {
-	
+
 	String id;
-	
+
 	public String getId() {
 		return id;
 	}
@@ -18,7 +18,7 @@ public class CarName {
 
 	@JsonProperty("maker_id")
 	String makerId;
-	
+
 	public String getMakerId() {
 		return makerId;
 	}
@@ -53,10 +53,10 @@ public class CarName {
 
 	@JsonProperty("name")
 	String name;
-	
+
 	@JsonProperty("created_at")
 	Date createdAt;
-	
+
 	@JsonProperty("updated_at")
 	Date updatedAt;
 }

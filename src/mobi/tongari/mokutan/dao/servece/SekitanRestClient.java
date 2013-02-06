@@ -1,8 +1,6 @@
-package mobi.tongari.mokutan.service;
+package mobi.tongari.mokutan.dao.servece;
 
-import mobi.tongari.mokutan.info.CarName;
-import mobi.tongari.mokutan.info.CarNameList;
-
+import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.json.MappingJacksonHttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
@@ -17,7 +15,7 @@ public interface SekitanRestClient {
 
 	@Get("/car_names.json")
 	@Accept(MediaType.APPLICATION_JSON)
-	CarNameList getCarNames();
+	ResponseEntity<CarName> getCarNames();
 
 	@Get("/car_names/{id}.json")
 	CarName getCarName(String id);

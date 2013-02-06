@@ -1,4 +1,4 @@
-package mobi.tongari.mokutan.util.Log;
+package mobi.tongari.mokutan.util;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -8,7 +8,6 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
-import mobi.tongari.mokutan.util.EnvironmentUtil;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -17,12 +16,11 @@ import android.util.Log;
 
 public class ExLog {
 
-	public final static String TAG = "SlcAssessment";
+	public final static String TAG = "Mokutan";
 
 	private ExLog() {
 	}
 
-	// ‡ˆÊ
 	// ERROR
 	// WARN
 	// INFO
@@ -99,13 +97,13 @@ public class ExLog {
 	}
 
 	/**
-	 * Œ»İ‚Ìlogcat‚Ì“à—e‚ğƒƒOƒtƒ@ƒCƒ‹‚Éo—Í‚·‚éB
+	 * ã€€ç¾åœ¨ã®Logcatã®å†…å®¹ã‚’ãƒ­ã‚°ãƒ•ã‚¡ã‚¤ãƒ«ã«å‡ºåŠ›ã™ã‚‹ã€‚
 	 */
 	public static void saveLogAndPopupDialog(final Context context) {
 		saveLog();
 
 		AlertDialog.Builder ad = new AlertDialog.Builder(context);
-		ad.setMessage("ƒVƒXƒeƒ€ƒGƒ‰[‚ª”­¶‚µ‚Ü‚µ‚½B\nŠÇ—Ò‚É–â‚¢‡‚í‚¹‚Ä‚­‚¾‚³‚¢B");
+		ad.setMessage("ã‚·ã‚¹ãƒ†ãƒ ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸã€‚ã—ã°ã‚‰ãã—ã¦ã‹ã‚‰ãŠè©¦ã—ãã ã•ã„ã€‚");
 		ad.setPositiveButton(context.getString(android.R.string.ok),
 				new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int whichButton) {
@@ -158,14 +156,14 @@ public class ExLog {
 				try {
 					reader.close();
 				} catch (IOException e) {
-					e(e, "logì¬‚ÉƒGƒ‰[”­¶:%s", e.getMessage());
+					e(e, "logä½œæˆæ™‚ã«ã‚¨ãƒ©ãƒ¼ç™ºç”Ÿ:%s", e.getMessage());
 				}
 			}
 			if (bw != null) {
 				try {
 					bw.close();
 				} catch (IOException e) {
-					e(e, "logì¬‚ÉƒGƒ‰[”­¶:%s", e.getMessage());
+					e(e, "logä½œæˆæ™‚ã«ã‚¨ãƒ©ãƒ¼ç™ºç”Ÿ:", e.getMessage());
 				}
 			}
 

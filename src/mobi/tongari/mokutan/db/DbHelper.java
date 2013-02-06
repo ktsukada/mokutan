@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import mobi.tongari.mokutan.R;
 import mobi.tongari.mokutan.dao.file.FileController;
-import mobi.tongari.mokutan.util.Log.ExLog;
+import mobi.tongari.mokutan.util.ExLog;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;

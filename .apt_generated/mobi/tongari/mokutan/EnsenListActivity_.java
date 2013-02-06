@@ -12,7 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import mobi.tongari.mokutan.R.layout;
-import mobi.tongari.mokutan.service.SekitanRestClient_;
+import mobi.tongari.mokutan.dao.servece.SekitanRestClient_;
 
 public final class EnsenListActivity_
     extends EnsenListActivity

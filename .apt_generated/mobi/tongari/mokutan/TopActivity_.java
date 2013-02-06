@@ -17,9 +17,9 @@ import android.view.ViewGroup.LayoutParams;
 import com.googlecode.androidannotations.api.BackgroundExecutor;
 import mobi.tongari.mokutan.R.id;
 import mobi.tongari.mokutan.R.layout;
-import mobi.tongari.mokutan.info.CarName;
-import mobi.tongari.mokutan.info.CarNameList;
-import mobi.tongari.mokutan.service.SekitanRestClient_;
+import mobi.tongari.mokutan.dao.servece.CarName;
+import mobi.tongari.mokutan.dao.servece.SekitanRestClient_;
+import org.springframework.http.ResponseEntity;
 
 public final class TopActivity_
     extends TopActivity
@@ -40,21 +40,6 @@ public final class TopActivity_
 
     private void afterSetContentView_() {
         {
-            View view = findViewById(id.show_map_button);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        TopActivity_.this.onClickShowMapButton();
-                    }
-
-                }
-                );
-            }
-        }
-        {
             View view = findViewById(id.test1_button);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -70,21 +55,6 @@ public final class TopActivity_
             }
         }
         {
-            View view = findViewById(id.sign_in_button);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        TopActivity_.this.onClickSignInButton();
-                    }
-
-                }
-                );
-            }
-        }
-        {
             View view = findViewById(id.show_ensen_list_button);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -93,6 +63,36 @@ public final class TopActivity_
                     @Override
                     public void onClick(View view) {
                         TopActivity_.this.onClickShowEnsenListButton();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.show_map_button);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        TopActivity_.this.onClickShowMapButton();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.sign_in_button);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        TopActivity_.this.onClickSignInButton();
                     }
 
                 }
@@ -124,6 +124,24 @@ public final class TopActivity_
     }
 
     @Override
+    public void updateCarName(final ResponseEntity<CarName> list) {
+        handler_.post(new Runnable() {
+
+
+            @Override
+            public void run() {
+                try {
+                    TopActivity_.super.updateCarName(list);
+                } catch (RuntimeException e) {
+                    Log.e("TopActivity_", "A runtime exception was thrown while executing code in a runnable", e);
+                }
+            }
+
+        }
+        );
+    }
+
+    @Override
     public void updateCarName2(final CarName list) {
         handler_.post(new Runnable() {
 
@@ -142,14 +160,14 @@ public final class TopActivity_
     }
 
     @Override
-    public void updateCarName(final CarNameList list) {
-        handler_.post(new Runnable() {
+    public void searchCarNamesAsync() {
+        BackgroundExecutor.execute(new Runnable() {
 
 
             @Override
             public void run() {
                 try {
-                    TopActivity_.super.updateCarName(list);
+                    TopActivity_.super.searchCarNamesAsync();
                 } catch (RuntimeException e) {
                     Log.e("TopActivity_", "A runtime exception was thrown while executing code in a runnable", e);
                 }
@@ -168,24 +186,6 @@ public final class TopActivity_
             public void run() {
                 try {
                     TopActivity_.super.searchCarNamesAsync2();
-                } catch (RuntimeException e) {
-                    Log.e("TopActivity_", "A runtime exception was thrown while executing code in a runnable", e);
-                }
-            }
-
-        }
-        );
-    }
-
-    @Override
-    public void searchCarNamesAsync() {
-        BackgroundExecutor.execute(new Runnable() {
-
-
-            @Override
-            public void run() {
-                try {
-                    TopActivity_.super.searchCarNamesAsync();
                 } catch (RuntimeException e) {
                     Log.e("TopActivity_", "A runtime exception was thrown while executing code in a runnable", e);
                 }

@@ -3,16 +3,10 @@
  */
 package mobi.tongari.mokutan;
 
-import java.util.Collections;
-import java.util.List;
+import mobi.tongari.mokutan.dao.servece.CarName;
+import mobi.tongari.mokutan.dao.servece.SekitanRestClient;
 
-import mobi.tongari.mokutan.info.CarName;
-import mobi.tongari.mokutan.info.CarNameList;
-import mobi.tongari.mokutan.service.SekitanRestClient;
-
-import org.springframework.http.MediaType;
-import org.springframework.http.converter.json.GsonHttpMessageConverter;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.http.ResponseEntity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -89,7 +83,7 @@ public class TopActivity extends Activity {
 	@Background
 	void searchCarNamesAsync() {
 		try {
-			CarNameList response = sekitanRestClient.getCarNames();
+			ResponseEntity<CarName> response = sekitanRestClient.getCarNames();
 			updateCarName(response);
 
 		} catch (Exception ex) {
@@ -104,7 +98,7 @@ public class TopActivity extends Activity {
 
 			CarName response = sekitanRestClient.getCarName("4");
 
-//			updateCarName(response);
+			// updateCarName(response);
 			updateCarName2(response);
 
 		} catch (Exception ex) {
@@ -114,7 +108,7 @@ public class TopActivity extends Activity {
 	}
 
 	@UiThread
-	public void updateCarName(CarNameList list) {
+	public void updateCarName(ResponseEntity<CarName> list) {
 		// TODO Auto-generated method stub
 		Log.d(" ", list.toString());
 	}

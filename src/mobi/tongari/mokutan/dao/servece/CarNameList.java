@@ -1,4 +1,4 @@
-package mobi.tongari.mokutan.info;
+package mobi.tongari.mokutan.dao.servece;
 
 import java.util.List;
 
