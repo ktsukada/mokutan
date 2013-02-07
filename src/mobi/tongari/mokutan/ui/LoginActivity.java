@@ -1,5 +1,10 @@
-package mobi.tongari.mokutan;
+package mobi.tongari.mokutan.ui;
 
+import mobi.tongari.mokutan.R;
+import mobi.tongari.mokutan.R.id;
+import mobi.tongari.mokutan.R.layout;
+import mobi.tongari.mokutan.R.menu;
+import mobi.tongari.mokutan.R.string;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;

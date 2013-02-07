@@ -1,5 +1,7 @@
-package mobi.tongari.mokutan;
+package mobi.tongari.mokutan.ui;
 
+import mobi.tongari.mokutan.R;
+import mobi.tongari.mokutan.R.layout;
 import android.app.Activity;
 import android.os.Bundle;
 

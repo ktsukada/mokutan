@@ -1,5 +1,8 @@
-package mobi.tongari.mokutan;
+package mobi.tongari.mokutan.ui;
 
+import mobi.tongari.mokutan.R;
+import mobi.tongari.mokutan.R.layout;
+import mobi.tongari.mokutan.R.menu;
 import mobi.tongari.mokutan.dao.servece.SekitanRestClient;
 import android.app.Activity;
 import android.view.Menu;

@@ -1,5 +1,7 @@
 .factorypath
 
+.apt_generated
+
 **/.apt_generated
 */.apt_generated/
 .apt_generated/
@@ -38,3 +40,5 @@ proguard/
 .idea/aa
 
 .DS_Store
+
+.apt_generated

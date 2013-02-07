@@ -1,8 +1,11 @@
 /**
  * 
  */
-package mobi.tongari.mokutan;
+package mobi.tongari.mokutan.ui;
 
+import mobi.tongari.mokutan.R;
+import mobi.tongari.mokutan.R.id;
+import mobi.tongari.mokutan.R.layout;
 import mobi.tongari.mokutan.dao.servece.CarName;
 import mobi.tongari.mokutan.dao.servece.SekitanRestClient;
 
@@ -78,6 +81,8 @@ public class TopActivity extends Activity {
 		// Intent intent = new Intent(getApplicationContext(),
 		// EnsenListActivity_.class);
 		// startActivity(intent);
+		Intent intent = new Intent(TopActivity.this, SherlockTabActivity_.class);
+		startActivity(intent);
 	}
 
 	@Background
