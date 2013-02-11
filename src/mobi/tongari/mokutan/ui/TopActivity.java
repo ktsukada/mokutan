@@ -4,22 +4,23 @@
 package mobi.tongari.mokutan.ui;
 
 import mobi.tongari.mokutan.R;
-import mobi.tongari.mokutan.R.id;
-import mobi.tongari.mokutan.R.layout;
-import mobi.tongari.mokutan.dao.servece.CarName;
-import mobi.tongari.mokutan.dao.servece.SekitanRestClient;
-
-import org.springframework.http.ResponseEntity;
-
+import mobi.tongari.mokutan.SharedPrefs_;
+import mobi.tongari.mokutan.rest.CarNameResponse;
+import mobi.tongari.mokutan.rest.ExCarNameResponse;
+import mobi.tongari.mokutan.rest.ExCarNamesResponse;
+import mobi.tongari.mokutan.rest.SekitanRestClient;
+import mobi.tongari.mokutan.rest.info.CarName;
 import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 
+import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.Background;
 import com.googlecode.androidannotations.annotations.Click;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.UiThread;
 import com.googlecode.androidannotations.annotations.rest.RestService;
+import com.googlecode.androidannotations.annotations.sharedpreferences.Pref;
 
 /**
  * @author k-tsukada
@@ -31,26 +32,18 @@ public class TopActivity extends Activity {
 	@RestService
 	SekitanRestClient sekitanRestClient;
 
-	// @Pref
-	// SharedPrefs_ mPrefs;
+	@Pref
+	SharedPrefs_ myPrefs;
 
-	// @Override
-	// protected void onCreate(Bundle savedInstanceState) {
-	// // TODO Auto-generated method stub
-	// super.onCreate(savedInstanceState);
-	//
-	// setContentView(R.layout.activity_top);
-	//
-	// findViewById(R.id.sign_in_button).setOnClickListener(
-	// new View.OnClickListener() {
-	// @Override
-	// public void onClick(View view) {
-	// Intent intent = new Intent(TopActivity.this,
-	// LoginActivity.class);
-	// startActivity(intent);
-	// }
-	// });
-	// }
+	@AfterViews
+	void init() {
+		//SharedPreferencesの使い方
+		myPrefs.clear(); //初期化
+		
+		myPrefs.userName().put("testTaro"); // セットするとき
+		
+		myPrefs.userName().get(); //参照するとき
+	}
 
 	@Click(R.id.sign_in_button)
 	void onClickSignInButton() {
@@ -58,37 +51,79 @@ public class TopActivity extends Activity {
 		startActivity(intent);
 	}
 
+	@Click(R.id.show_map_button)
+	void onClickShowMapButton() {
+	}
+
 	@Click(R.id.test1_button)
 	void onClickTest1Button() {
 		searchCarNamesAsync2();
 	}
 
-	@Click(R.id.show_map_button)
-	void onClickShowMapButton() {
-		// MapActivity_.intent(getApplicationContext()).start();
-		// Intent intent = new Intent(getApplicationContext(),
-		// MapActivity.class);
-		// startActivity(intent);
-
-		// CarNameList aa = sekitanRestClient.getCarNames();
-		// ExLog.d("mokutan", aa.toString());
-		searchCarNamesAsync();
+	@Click(R.id.test2_button)
+	void onClickTest2Button() {
+		test2Async();
 	}
 
-	@Click(R.id.show_ensen_list_button)
-	void onClickShowEnsenListButton() {
-		// EnsenListActivity_.intent(getApplicationContext()).start();
-		// Intent intent = new Intent(getApplicationContext(),
-		// EnsenListActivity_.class);
-		// startActivity(intent);
-		Intent intent = new Intent(TopActivity.this, SherlockTabActivity_.class);
-		startActivity(intent);
+	@Background
+	void test2Async() {
+		try {
+
+			ExCarNamesResponse response = sekitanRestClient.getExCarNames();
+
+			response.toString();
+
+		} catch (Exception ex) {
+			String a = "aaa";
+			a.getBytes();
+		} finally {
+		}
+	}
+
+	@Click(R.id.test3_button)
+	void onClickTest3Button() {
+		test3Async();
+	}
+
+	@Background
+	void test3Async() {
+		try {
+
+			ExCarNameResponse response = sekitanRestClient.getExCarName();
+
+			response.toString();
+
+		} catch (Exception ex) {
+			String a = "aaa";
+			a.getBytes();
+		} finally {
+		}
+	}
+
+	@Click(R.id.test4_button)
+	void onClickTest4Button() {
+		CarNameListActivity_.intent(this).start();
+	}
+
+	@Click(R.id.test5_button)
+	void onClickTest5Button() {
+
+	}
+
+	@Click(R.id.test6_button)
+	void onClickTest6Button() {
+
+	}
+
+	@Click(R.id.test7_button)
+	void onClickTest7Button() {
+
 	}
 
 	@Background
 	void searchCarNamesAsync() {
 		try {
-			ResponseEntity<CarName> response = sekitanRestClient.getCarNames();
+			CarNameResponse response = sekitanRestClient.getCarNames();
 			updateCarName(response);
 
 		} catch (Exception ex) {
@@ -102,8 +137,6 @@ public class TopActivity extends Activity {
 		try {
 
 			CarName response = sekitanRestClient.getCarName("4");
-
-			// updateCarName(response);
 			updateCarName2(response);
 
 		} catch (Exception ex) {
@@ -113,7 +146,7 @@ public class TopActivity extends Activity {
 	}
 
 	@UiThread
-	public void updateCarName(ResponseEntity<CarName> list) {
+	public void updateCarName(CarNameResponse list) {
 		// TODO Auto-generated method stub
 		Log.d(" ", list.toString());
 	}

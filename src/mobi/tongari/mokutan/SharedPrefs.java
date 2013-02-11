@@ -5,6 +5,6 @@ import com.googlecode.androidannotations.annotations.sharedpreferences.SharedPre
 
 @SharedPref
 public interface SharedPrefs {
-	@DefaultString("")
+	@DefaultString("q")
 	String userName();
 }

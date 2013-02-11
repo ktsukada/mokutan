@@ -60,6 +60,10 @@
             android:name="mobi.tongari.mokutan.ui.SherlockTabActivity_"
             android:label="@string/title_activity_sherlock_tab" >
         </activity>
+        <activity
+            android:name="mobi.tongari.mokutan.ui.CarNameListActivity_"
+            android:label="@string/title_activity_carname_list" >
+        </activity>
     </application>
 
 </manifest>

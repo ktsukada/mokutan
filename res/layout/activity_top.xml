@@ -23,7 +23,7 @@
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
         android:text="@string/action_show_map" />
-    
+
     <Button
         android:id="@+id/show_ensen_list_button"
         android:layout_width="wrap_content"
@@ -33,7 +33,7 @@
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
         android:text="@string/action_show_ensen_list" />
-    
+
     <Button
         android:id="@+id/test1_button"
         android:layout_width="wrap_content"
@@ -42,6 +42,106 @@
         android:layout_marginTop="16dp"
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
-        android:text="test1" />
+        android:text="REST で１件とる　NG" />
+
+    <Button
+        android:id="@+id/test2_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="RESTで複数件とる" />
+
+    <Button
+        android:id="@+id/test3_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="REST で１件とる" />
+
+    <Button
+        android:id="@+id/test4_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="API+ListViewサンプル" />
+
+    <Button
+        android:id="@+id/test5_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="test5" />
+
+    <Button
+        android:id="@+id/test6_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="test6" />
+
+    <Button
+        android:id="@+id/test7_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="test7" />
+
+    <Button
+        android:id="@+id/test8_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="test8" />
+
+    <Button
+        android:id="@+id/test9_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="test9" />
+
+    <Button
+        android:id="@+id/test10_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="test10" />
+
+    <Button
+        android:id="@+id/test11_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="test11" />
 
 </LinearLayout>
