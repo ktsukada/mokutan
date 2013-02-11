@@ -26,8 +26,7 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/Theme.Sherlock" >
+        android:label="@string/app_name" >
 
         <!-- Google API の認証キー -->
         <meta-data
@@ -63,6 +62,10 @@
         <activity
             android:name="mobi.tongari.mokutan.ui.CarNameListActivity_"
             android:label="@string/title_activity_carname_list" >
+        </activity>
+        <activity
+            android:name="mobi.tongari.mokutan.ui.DbTestActivity_"
+            android:label="@string/title_activity_db_test" >
         </activity>
     </application>
 

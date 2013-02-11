@@ -9,6 +9,7 @@ import mobi.tongari.mokutan.rest.ExCarNamesResponse;
 import mobi.tongari.mokutan.rest.SekitanRestClient;
 import mobi.tongari.mokutan.rest.info.CarName;
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
 import android.widget.ListView;
@@ -44,6 +45,8 @@ public class CarNameListActivity extends Activity {
 	@NonConfigurationInstance
 	List<CarName> listItems;
 
+	ProgressDialog progressDialog;  
+	
 	@AfterViews
 	void initViews() {
 		LayoutAnimationController layoutAnimation = AnimationUtils
@@ -55,6 +58,10 @@ public class CarNameListActivity extends Activity {
 
 	@Click
 	void showButton() {
+		progressDialog = new ProgressDialog(CarNameListActivity.this);  
+		progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);  
+		progressDialog.setMessage("Loading...");  
+		progressDialog.show();  
 		getCarNamesInBackground();
 	}
 	
@@ -67,6 +74,7 @@ public class CarNameListActivity extends Activity {
 	@UiThread
 	void showList(List<CarName> items) {
 		adapter.update(items);
+		progressDialog.dismiss();
 	}
 	
 	@ItemClick

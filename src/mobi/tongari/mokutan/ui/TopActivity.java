@@ -37,12 +37,12 @@ public class TopActivity extends Activity {
 
 	@AfterViews
 	void init() {
-		//SharedPreferencesの使い方
-		myPrefs.clear(); //初期化
-		
+		// SharedPreferencesの使い方
+		myPrefs.clear(); // 初期化
+
 		myPrefs.userName().put("testTaro"); // セットするとき
-		
-		myPrefs.userName().get(); //参照するとき
+
+		myPrefs.userName().get(); // 参照するとき
 	}
 
 	@Click(R.id.sign_in_button)
@@ -107,7 +107,7 @@ public class TopActivity extends Activity {
 
 	@Click(R.id.test5_button)
 	void onClickTest5Button() {
-
+		DbTestActivity_.intent(this).start();
 	}
 
 	@Click(R.id.test6_button)

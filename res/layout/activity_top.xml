@@ -82,7 +82,7 @@
         android:layout_marginTop="16dp"
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
-        android:text="test5" />
+        android:text="DBの操作、スピナー" />
 
     <Button
         android:id="@+id/test6_button"
