@@ -26,15 +26,17 @@ public class DbTestActivity extends Activity {
 	@ViewById
 	Spinner areaSpinner;
 
+	ArrayAdapter<String> adapter;
+
 	@AfterViews
 	void initViews() {
-		ArrayAdapter<Area> adapter = new ArrayAdapter<Area>(this,
+		adapter = new ArrayAdapter<String>(this,
 				android.R.layout.simple_spinner_item);
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		areaSpinner.setAdapter(adapter);
 		try {
 			for (Area item : areaDao.queryForAll()) {
-				adapter.add(item);
+				adapter.add(item.getName());
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -45,7 +47,9 @@ public class DbTestActivity extends Activity {
 	@Click
 	void addDataButton() {
 		try {
-			areaDao.create(new Area("エリア"));
+			Area area = new Area("エリア");
+			areaDao.create(area);
+			adapter.add(area.getName());
 		} catch (SQLException e) {
 			Toast.makeText(getApplicationContext(), "データが取得出来ませんでした。",
 					Toast.LENGTH_SHORT).show();

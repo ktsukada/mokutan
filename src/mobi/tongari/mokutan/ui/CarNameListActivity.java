@@ -3,7 +3,6 @@ package mobi.tongari.mokutan.ui;
 import java.util.List;
 
 import mobi.tongari.mokutan.R;
-import mobi.tongari.mokutan.adapter.CarNameListItem;
 import mobi.tongari.mokutan.adapter.CarNamesAdapter;
 import mobi.tongari.mokutan.rest.ExCarNamesResponse;
 import mobi.tongari.mokutan.rest.SekitanRestClient;
@@ -45,8 +44,8 @@ public class CarNameListActivity extends Activity {
 	@NonConfigurationInstance
 	List<CarName> listItems;
 
-	ProgressDialog progressDialog;  
-	
+	ProgressDialog progressDialog;
+
 	@AfterViews
 	void initViews() {
 		LayoutAnimationController layoutAnimation = AnimationUtils
@@ -58,13 +57,13 @@ public class CarNameListActivity extends Activity {
 
 	@Click
 	void showButton() {
-		progressDialog = new ProgressDialog(CarNameListActivity.this);  
-		progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);  
-		progressDialog.setMessage("Loading...");  
-		progressDialog.show();  
+		progressDialog = new ProgressDialog(CarNameListActivity.this);
+		progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+		progressDialog.setMessage("Loading...");
+		progressDialog.show();
 		getCarNamesInBackground();
 	}
-	
+
 	@Background
 	void getCarNamesInBackground() {
 		ExCarNamesResponse response = restClient.getExCarNames();
@@ -76,21 +75,24 @@ public class CarNameListActivity extends Activity {
 		adapter.update(items);
 		progressDialog.dismiss();
 	}
-	
+
 	@ItemClick
 	public void myListViewItemClicked(CarName clickedItem) {
-	Toast.makeText(getApplicationContext(), "Clicked!",Toast.LENGTH_SHORT).show();
-		
+		Toast.makeText(getApplicationContext(), "Clicked!", Toast.LENGTH_SHORT)
+				.show();
+
 	}
-	
+
 	@ItemLongClick
 	public void myListViewItemLongClicked(CarName clickedItem) {
-		Toast.makeText(getApplicationContext(), "LongClicked!",Toast.LENGTH_SHORT).show();
+		Toast.makeText(getApplicationContext(), "LongClicked!",
+				Toast.LENGTH_SHORT).show();
 	}
 
 	@ItemSelect
 	public void myListViewItemSelected(boolean selected, CarName selectedItem) {
-		Toast.makeText(getApplicationContext(), "Selected!",Toast.LENGTH_SHORT).show();
+		Toast.makeText(getApplicationContext(), "Selected!", Toast.LENGTH_SHORT)
+				.show();
 	}
 
 }
