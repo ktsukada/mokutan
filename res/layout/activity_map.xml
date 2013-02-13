@@ -5,5 +5,7 @@
     android:id="@+id/mapview"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:clickable="true"/>
+    android:clickable="true"
+    android:apiKey="YOUR_API_KEY" 
+    />
 
