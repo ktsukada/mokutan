@@ -8,5 +8,6 @@
     <string name="title_activity_sherlock_tab">SherlockTabActivity</string>
     <string name="title_activity_carname_list">CarNames</string>
     <string name="title_activity_db_test">DbTestActivity</string>
+    <string name="title_activity_map">MapActivity</string>
 
 </resources>
