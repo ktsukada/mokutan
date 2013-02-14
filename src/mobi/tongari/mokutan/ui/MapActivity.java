@@ -1,7 +1,9 @@
 package mobi.tongari.mokutan.ui;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import mobi.tongari.mokutan.R;
 import android.location.Criteria;
@@ -15,6 +17,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
@@ -23,12 +26,16 @@ import com.googlecode.androidannotations.annotations.OptionsItem;
 import com.googlecode.androidannotations.annotations.SystemService;
 
 @EActivity(R.layout.activity_map)
-public class MapActivity extends FragmentActivity {
+public class MapActivity extends FragmentActivity implements
+		GoogleMap.OnInfoWindowClickListener {
 
 	@FragmentById
 	SupportMapFragment mapFragment;
 
 	GoogleMap map;
+
+	//TODO: modelに変更
+	Map<String, String> markers = new HashMap<String, String>();
 
 	@SystemService
 	LocationManager locationManager;
@@ -70,15 +77,22 @@ public class MapActivity extends FragmentActivity {
 		this.moveCamera(true, getMyLocation());
 	}
 
-	void protMarkers(List<MarkerOptions> markers) {
-		for (MarkerOptions marker : markers) {
+	void protMarkers(List<MarkerOptions> options) {
+		for (MarkerOptions option : options) {
 			// /marker.icon(arg0);
-			map.addMarker(marker);
+			Marker marker = map.addMarker(option);
+			markers.put(marker.getId(), "item1");
 		}
 	}
 
+	@Override
+	public void onInfoWindowClick(Marker marker) {
+		String mapItem = (String) markers.get(marker.getId());
+		// TODO: Markerのモデル
+	}
+
 	LatLng getMyLocation() {
-		//TODO: 現在地の取得で日本即位に変換しないとダメ
+		// TODO: 現在地の取得で日本即位に変換しないとダメ
 		Criteria criteria = new Criteria();
 		String provider = locationManager.getBestProvider(criteria, false);
 		Location location = locationManager.getLastKnownLocation(provider);
