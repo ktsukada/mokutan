@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/header_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        >
+	   <mobi.tongari.mokutan.ui.widget.Header_
+	        android:id="@+id/main_header"
+		   android:layout_height="wrap_content"
+         android:layout_width="fill_parent"/>    
+    </FrameLayout>
+    <FrameLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header_frame"
+        android:layout_above="@+id/footer_frame"
+        >
+        <ScrollView 
+            android:id="@+id/main_scroll_view"    
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="もじやで！"
+                android:textAlignment="center" />
+
+        </ScrollView>       
+    </FrameLayout>
+
+     <FrameLayout
+         android:id="@+id/footer_frame"
+         android:layout_height="wrap_content"
+         android:layout_width="fill_parent"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentLeft="true"
+          >
+        <mobi.tongari.mokutan.ui.widget.Footer_
+		   android:id="@+id/main_footer"
+		   android:layout_height="wrap_content"
+         android:layout_width="fill_parent"/>    
+     
+
+    </FrameLayout>
+
+</RelativeLayout>

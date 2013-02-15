@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/header_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        >
+	   <mobi.tongari.mokutan.ui.widget.Header_
+	        android:id="@+id/main_header"
+		   android:layout_height="wrap_content"
+         android:layout_width="fill_parent"/>    
+    </FrameLayout>
+    <FrameLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header_frame"
+        android:layout_above="@+id/footer_frame"
+        >
+        <ScrollView 
+            android:id="@+id/main_scroll_view"    
+            android:fillViewport="true"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:background="@color/base_background_color"
+            >
+		<RelativeLayout 
+		     android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@color/transparent">
+
+			<TextView
+			    android:id="@+id/text"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentTop="true"
+			    android:layout_centerInParent="true"
+			    android:gravity="top|center_horizontal"
+			    android:padding="30dp"   
+                android:textAlignment="viewStart"
+			    android:text="4つ以上のクリップをするにはAlike会員になる必要があります。登録は無料です。" />
+
+			<Button 
+			    android:id="@+id/regist_button"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"			    
+			    android:layout_centerInParent="true"
+			    android:layout_below="@+id/text"
+			    android:text="無料登録する"
+			    android:layout_margin="10dp"
+			   />
+			<Button 
+			    android:id="@+id/login_button"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"			    
+			    android:layout_centerInParent="true"		    
+			    android:layout_below="@+id/regist_button"  
+			    android:text="既に会員の方はこちら"
+			    android:layout_margin="10dp"
+			   />
+		    	    
+		</RelativeLayout>
+
+        </ScrollView>       
+    </FrameLayout>
+
+     <FrameLayout
+         android:id="@+id/footer_frame"
+         android:layout_height="wrap_content"
+         android:layout_width="fill_parent"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentLeft="true"
+          >
+        <mobi.tongari.mokutan.ui.widget.Footer_
+		   android:id="@+id/main_footer"
+		   android:layout_height="wrap_content"
+         android:layout_width="fill_parent"/>    
+     
+
+    </FrameLayout>
+    <FrameLayout 
+        android:id="@+id/popup_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100sp"
+        android:background="@color/popup_background"
+        android:clickable="true"       
+        android:visibility="gone" >
+  <ScrollView  
+            android:fillViewport="true"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:background="@color/transparent"
+            >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:orientation="vertical"
+        android:padding="20sp"  >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="20dp"
+            android:text="どうする？"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/white" />
+        <Button
+            android:id="@+id/regist_mail_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_marginBottom="5dp"
+            android:text="メールで登録"
+            android:textSize="18sp"
+            android:textAlignment="center" />
+        <Button
+            android:id="@+id/regist_twitter_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_marginBottom="5dp"
+            android:text="Twitterで登録"
+            android:textSize="18sp"
+            android:textAlignment="center" />
+        <Button
+            android:id="@+id/regist_facebook_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_marginBottom="5dp"
+            android:text="Facebookで登録"
+            android:textSize="18sp"
+            android:textAlignment="center" />
+        <Button
+            android:id="@+id/regist_mixi_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_marginBottom="5dp"
+            android:text="mixiIDで登録"
+            android:textSize="18sp"
+            android:textAlignment="center" />
+        <Button
+            android:id="@+id/regist_cancel_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="キャンセル"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:textAlignment="center" />
+        
+        
+    </LinearLayout>
+    </ScrollView>       
+    </FrameLayout>
+
+</RelativeLayout>

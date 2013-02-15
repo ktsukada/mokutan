@@ -4,10 +4,6 @@
     <string name="app_name">mokutan</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
-    <string name="title_activity_ensen_list">沿線</string>
-    <string name="title_activity_sherlock_tab">SherlockTabActivity</string>
-    <string name="title_activity_carname_list">CarNames</string>
-    <string name="title_activity_db_test">DbTestActivity</string>
-    <string name="title_activity_map">MapActivity</string>
-
+    
+   
 </resources>

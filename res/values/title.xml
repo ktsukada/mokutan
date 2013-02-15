@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="title_activity_ensen_list">沿線</string>
+    <string name="title_activity_sherlock_tab">SherlockTabActivity</string>
+    <string name="title_activity_carname_list">CarNames</string>
+    <string name="title_activity_db_test">DbTestActivity</string>
+    <string name="title_activity_layout_test">レイアウトテスト</string>
+    <string name="title_activity_map">新着情報</string>
+    <string name="title_activity_newer_top">新着情報</string>
+    <string name="title_activity_search_top">検索</string>
+    <string name="title_activity_myclip_top">マイクリップ</string>
+    <string name="title_activity_mypage_top">マイページ</string>
+    <string name="title_activity_register">ユーザー登録</string>
+
+</resources>

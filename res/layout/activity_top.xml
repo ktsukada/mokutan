@@ -1,147 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:layout_height="match_parent" >
 
-    <Button
-        android:id="@+id/sign_in_button"
-        android:layout_width="wrap_content"
+    <FrameLayout
+        android:id="@+id/header_frame"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="16dp"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp"
-        android:text="@string/action_sign_in_register" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
 
-    <Button
-        android:id="@+id/show_map_button"
-        android:layout_width="wrap_content"
+        <mobi.tongari.mokutan.ui.widget.Header_
+            android:id="@+id/main_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/footer_frame"
+        android:layout_below="@+id/header_frame" >
+
+        <ScrollView
+            android:id="@+id/main_scroll_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/sign_in_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/action_sign_in_register" />
+
+                <Button
+                    android:id="@+id/show_map_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/action_show_map" />
+
+                <Button
+                    android:id="@+id/show_ensen_list_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/action_show_ensen_list" />
+
+                <Button
+                    android:id="@+id/test1_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="REST で１件とる　NG" />
+
+                <Button
+                    android:id="@+id/test2_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RESTで複数件とる" />
+
+                <Button
+                    android:id="@+id/test3_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="REST で１件とる" />
+
+                <Button
+                    android:id="@+id/test4_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="API+ListViewサンプル" />
+
+                <Button
+                    android:id="@+id/test5_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DBの操作、スピナー" />
+
+                <Button
+                    android:id="@+id/test6_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="test6" />
+
+                <Button
+                    android:id="@+id/test7_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="test7" />
+
+                <Button
+                    android:id="@+id/test8_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="test8" />
+
+                <Button
+                    android:id="@+id/test9_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="test9" />
+
+                <Button
+                    android:id="@+id/test10_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="test10" />
+
+                <Button
+                    android:id="@+id/test11_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="test11" />
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/footer_frame"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="16dp"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp"
-        android:text="@string/action_show_map" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
 
-    <Button
-        android:id="@+id/show_ensen_list_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="16dp"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp"
-        android:text="@string/action_show_ensen_list" />
+        <mobi.tongari.mokutan.ui.widget.Footer_
+            android:id="@+id/main_footer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
 
-    <Button
-        android:id="@+id/test1_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="16dp"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp"
-        android:text="REST で１件とる　NG" />
-
-    <Button
-        android:id="@+id/test2_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="16dp"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp"
-        android:text="RESTで複数件とる" />
-
-    <Button
-        android:id="@+id/test3_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="16dp"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp"
-        android:text="REST で１件とる" />
-
-    <Button
-        android:id="@+id/test4_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="16dp"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp"
-        android:text="API+ListViewサンプル" />
-
-    <Button
-        android:id="@+id/test5_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="16dp"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp"
-        android:text="DBの操作、スピナー" />
-
-    <Button
-        android:id="@+id/test6_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="16dp"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp"
-        android:text="test6" />
-
-    <Button
-        android:id="@+id/test7_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="16dp"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp"
-        android:text="test7" />
-
-    <Button
-        android:id="@+id/test8_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="16dp"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp"
-        android:text="test8" />
-
-    <Button
-        android:id="@+id/test9_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="16dp"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp"
-        android:text="test9" />
-
-    <Button
-        android:id="@+id/test10_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="16dp"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp"
-        android:text="test10" />
-
-    <Button
-        android:id="@+id/test11_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="16dp"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp"
-        android:text="test11" />
-
-</LinearLayout>
+</RelativeLayout>

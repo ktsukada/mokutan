@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+ <LinearLayout
+         android:layout_gravity="bottom"
+    	 android:orientation="horizontal" 
+         android:layout_height="wrap_content"
+         android:layout_width="fill_parent"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentLeft="true"
+         android:background="@color/main_footer_bg"
+         android:weightSum="4" >
+
+         <Button
+             android:id="@+id/newer_top_button"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:drawableTop="@drawable/ic_menu_star"     
+        	 android:background="@drawable/footer_button"        	 
+             android:textColor="@color/main_footer_txt"
+             android:padding="0dp"
+             android:text="@string/title_activity_newer_top"
+             android:textSize="8sp" />
+
+          <Button
+              android:id="@+id/search_top_button"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:background="@drawable/footer_button"
+              android:drawableTop="@drawable/ic_menu_star"
+              android:padding="0dp"
+              android:text="@string/title_activity_search_top"
+              android:textColor="@color/main_footer_txt"
+              android:textSize="8sp" />
+
+           <Button
+               android:id="@+id/myclip_top_button"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"               
+               android:drawableTop="@drawable/ic_menu_star"   
+        	 android:background="@drawable/footer_button"      	 
+             android:textColor="@color/main_footer_txt"
+             android:padding="0dp"
+               android:text="@string/title_activity_myclip_top"
+               android:textSize="8sp" />
+
+            <Button
+                android:id="@+id/mypage_top_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"      
+                android:drawableTop="@drawable/ic_menu_star"   
+        	 android:background="@drawable/footer_button"      	 
+             android:textColor="@color/main_footer_txt"
+             android:padding="0dp"
+               android:text="@string/title_activity_mypage_top"
+                android:textSize="8sp" />
+
+    </LinearLayout>
+   </merge>

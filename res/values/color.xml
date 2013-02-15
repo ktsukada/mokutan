@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- アプリベースカラー -->
+    <color name="base_background_color">#FFF1EFE9</color>
+    <color name="base_text_color">#FF26130C</color>
+    
+    <!-- ポップアップ -->
+    <color name="popup_background">#88000000</color>
+    
+    
+    <!-- headerリソース -->
+    <color name="main_header_txt">#ffffff</color>
+    <color name="transparent">#00ffffff</color>
+    
+    <!-- footerリソース -->
+    <color name="main_footer_txt">#ffffff</color>    
+    <color name="main_footer_bg">#000000</color>    
+    <color name="footer_btn_active">#22ffffff</color>
+    
+      
+    
+</resources>
