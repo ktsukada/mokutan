@@ -91,6 +91,10 @@
             android:name="mobi.tongari.mokutan.ui.RegisterTopActivity_"
             android:label="@string/title_activity_register" >
         </activity>
+        <activity
+            android:name="mobi.tongari.mokutan.ui.TestFragmentActivity_"
+            android:label="@string/title_activity_register" >
+        </activity>
     </application>
 
 </manifest>

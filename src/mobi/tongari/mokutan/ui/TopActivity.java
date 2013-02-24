@@ -54,7 +54,7 @@ public class TopActivity extends Activity {
 	@Click(R.id.show_map_button)
 	void onClickShowMapButton() {
 		MapActivity_.intent(this).start();
-		
+
 	}
 
 	@Click(R.id.test1_button)
@@ -114,7 +114,7 @@ public class TopActivity extends Activity {
 
 	@Click(R.id.test6_button)
 	void onClickTest6Button() {
-
+		TestFragmentActivity_.intent(this).start();
 	}
 
 	@Click(R.id.test7_button)
